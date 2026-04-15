@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-family: 'Baloo 2', cursive;
+  color: #1a5c50;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-links a.active {
+  color: #1a5c50;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #1a5c50, #1a5c50);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Founder Section */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+}
+
+.founder-img img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.quote {
+  color: #1a5c50;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/* Vision & Mission */
+.vision-mission {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f0fffe;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* STEAM */
+.steam {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.steam-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.steam-card {
+  background: #1a5c50;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 150px;
+  font-weight: bold;
+}
+
+/* Timeline */
+.journey {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.timeline-item {
+  margin: 20px 0;
+}
+
+/* Fun Stickers */
+.fun {
+  text-align: center;
+  padding: 60px 20px;
+  background: #eafffd;
+}
+
+.stickers span {
+  font-size: 2.5rem;
+  margin: 10px;
+  display: inline-block;
+  animation: float 3s infinite ease-in-out;
+}
+
+.stickers span:nth-child(2) { animation-delay: 0.5s; }
+.stickers span:nth-child(3) { animation-delay: 1s; }
+.stickers span:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Footer */
+footer {
+  background: #1a5c50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
+
+.my-story {
+  background: linear-gradient(135deg, #eafffd, #ffffff);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section Header */
+.story-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.story-header h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 2.8rem;
+  color: #1a5c50;
+}
+
+.story-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Layout */
+.story-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Founder Image */
+.story-image img {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Text */
+.story-text {
+  flex: 1;
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Signature */
+.signature {
+  margin-top: 20px;
+}
+
+.signature h4 {
+  font-style: italic;
+  color: #1a5c50;
+}
+
+.signature h3 {
+  margin: 5px 0;
+  color: #222;
+}
+
+.signature span {
+  color: #666;
+}
+
+/* Floating Stickers */
+.stickers span {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 6s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+.stickers span:nth-child(1) { top: 10%; left: 5%; }
+.stickers span:nth-child(2) { top: 80%; left: 10%; }
+.stickers span:nth-child(3) { top: 15%; right: 5%; }
+.stickers span:nth-child(4) { top: 70%; right: 10%; }
+.stickers span:nth-child(5) { top: 40%; left: 3%; }
+.stickers span:nth-child(6) { bottom: 10%; right: 3%; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-image img {
+    width: 80%;
+  }
+
+  .story-header h2 {
+    font-size: 2rem;
+  }
+}
