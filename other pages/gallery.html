@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | AAAlam Learning Community</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Explore the gallery and journey of AAAlam Learning Community in Coimbatore. Discover STEAM-based learning, workshops, and milestones.">
+<meta name="keywords" content="aalam, aalam learning community, aalam coimbatore, learning centre in coimbatore, steam education, aalam gallery">
+<meta name="author" content="AAAlam Learning Community">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+  <nav class="navbar">
+    <h2 class="logo">AAAlam</h2>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/other pages/about.html">About Us</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+  <h1 data-aos="fade-up">Our Gallery</h1>
+  <p data-aos="fade-up" data-aos-delay="200">
+    Capturing Moments of Innovation, Creativity, and Learning
+  </p>
+</section>
+
+<!-- ================= INTERACTIVE GALLERY ================= -->
+<section class="gallery-section">
+  <h2 data-aos="fade-up">Explore Our Activities</h2>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons" data-aos="fade-up">
+    <button class="active" onclick="filterSelection('all')">All</button>
+    <button onclick="filterSelection('workshops')">Workshops</button>
+    <button onclick="filterSelection('steam')">STEAM</button>
+    <button onclick="filterSelection('events')">Events</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery-grid">
+    <div class="gallery-item workshops">
+      <img src="images/gallery1.jpg" alt="AAAlam Workshop">
+    </div>
+    <div class="gallery-item steam">
+      <img src="images/gallery2.jpg" alt="STEAM Learning at AAAlam">
+    </div>
+    <div class="gallery-item events">
+      <img src="images/gallery3.jpg" alt="AAAlam Event">
+    </div>
+    <div class="gallery-item workshops">
+      <img src="images/gallery4.jpg" alt="Students Learning">
+    </div>
+    <div class="gallery-item steam">
+      <img src="images/gallery5.jpg" alt="Hands-on STEAM Activity">
+    </div>
+    <div class="gallery-item events">
+      <img src="images/gallery6.jpg" alt="AAAlam Celebration">
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<!-- ================= JOURNEY OF AAALAM ================= -->
+<section class="journey">
+  <h2 data-aos="fade-up">The Journey of AAAlam</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item" data-aos="fade-right">
+      <h3>The Beginning – 2023</h3>
+      <p>
+        AAAlam was born on 23rd November 2023 with a powerful intention to nurture
+        young minds through practical education using the STEAM approach.
+        It began with weekend batches and expanded to daily evening tutoring.
+      </p>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-left">
+      <h3>First Year Growth – 2024</h3>
+      <p>
+        The first year witnessed workshops, collaborations, and partnerships.
+        AAAlam collaborated with Thinkin Lab and conducted programs at the
+        Regional Science Centre, Coimbatore. The 1st Anniversary was celebrated
+        on 14th November 2024.
+      </p>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-right">
+      <h3>Expanding Horizons – Year Two</h3>
+      <p>
+        AAAlam gained recognition through guest lectures, including sessions at
+        CEG, Anna University, and PSGR Krishnammal College. Summer camps and
+        STEAM programs reached students across institutions.
+      </p>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-left">
+      <h3>Community Impact</h3>
+      <p>
+        Programs were conducted for Karkai Nandrey NGO and at the Regional Science
+        Centre. Weekend sessions strengthened grassroots learning experiences.
+      </p>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-right">
+      <h3>Celebrating the Second Year</h3>
+      <p>
+        AAAlam celebrated its second anniversary at Agaram Iyarkkai Vazhi Velan
+        Pannai, Sulur. A tree was planted to symbolize growth, sustainability,
+        and the future of young minds.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 AAAlam Learning Community | Coimbatore</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+
+// Gallery Filter
+function filterSelection(category) {
+  let items = document.getElementsByClassName("gallery-item");
+  if (category === "all") category = "";
+
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.display =
+      items[i].className.indexOf(category) > -1 ? "block" : "none";
+  }
+}
+
+// Lightbox
+const images = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "block";
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.onclick = () => lightbox.style.display = "none";
+</script>
+
+</body>
+</html>
